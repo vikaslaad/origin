@@ -45,7 +45,7 @@
         "creationTimestamp": null
       },
       "spec": {
-        "host": "www.example.com",
+        "host": "${APPLICATION_DOMAIN}",
         "to": {
           "kind": "Service",
           "name": "frontend"
@@ -378,6 +378,11 @@
       "name": "MYSQL_DATABASE",
       "description": "database name",
       "value": "root"
+    },
+    {
+      "name": "APPLICATION_DOMAIN",
+      "description": "The exposed hostname that will route to the sample application, if left blank a value will be defaulted.",
+      "value": ""
     }
   ],
   "labels": {
